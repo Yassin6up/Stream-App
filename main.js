@@ -4,6 +4,9 @@
 
 async function start(){
   let stream = await navigator.mediaDevices.getDisplayMedia({video: { mediaSource : "screen"}, audio: true })
+    document.getElementById("video").srcObject = stream
+    document.getElementById("video").play() ;
+  
 
   let data = [] ;
 
@@ -36,10 +39,5 @@ mediaRecorder.onstop = (e)=>{
 
 document.getElementById('btn').onclick = ()=>{
   start()
-  
-}
-
-document.getElementById('btnDownload').onclick = ()=>{
-  
   
 }
