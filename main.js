@@ -39,5 +39,6 @@ mediaRecorder.onstop = (e)=>{
 
 document.getElementById('btn').onclick = ()=>{
   start()
+  console.log("recording")
   
 }
